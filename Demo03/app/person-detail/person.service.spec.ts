@@ -23,7 +23,7 @@ describe('Person Service', () => {
         });
 
         service = TestBed.get(PersonService);
-        mockBackend = TestBed.get(MockBackend);
+        mockBackend = TestBed.get(XHRBackend);
     });
     // beforeEach(() => {
     //     service = TestBed.get(PersonService);
@@ -91,7 +91,7 @@ describe('Person Service', () => {
 
 
 
-    fit('Should return the json of persons', async(() => {
+    it('Should return the json of persons', async(() => {
             // Arrange
             let items: Person[] = null;
             mockBackend.connections.subscribe((c: MockConnection) => {
