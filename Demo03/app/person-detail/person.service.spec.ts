@@ -32,7 +32,7 @@ describe('Person Service', () => {
     //     service = s;
     // }));
 
-    it('Get a person', () => {
+    it('Should get a person', () => {
         expect(service.getPerson(1).id).toEqual(1);
         expect(service.getPerson(1).firstname).toEqual("Thomas");
     });
@@ -92,31 +92,31 @@ describe('Person Service', () => {
 
 
     it('Should return the json of persons', async(() => {
-            // Arrange
-            let items: Person[] = null;
-            mockBackend.connections.subscribe((c: MockConnection) => {
-                console.log(c.request.url);
-                expect(c.request.url).toEqual('app/person-detail/person-data.json');
-                c.mockRespond(new Response
-                    (new ResponseOptions({
-                        body: `[{
+        // Arrange
+        let items: Person[] = null;
+        mockBackend.connections.subscribe((c: MockConnection) => {
+            console.log(c.request.url);
+            expect(c.request.url).toEqual('app/person-detail/person-data.json');
+            c.mockRespond(new Response
+                (new ResponseOptions({
+                    body: `[{
                         "id": 4,
                         "firstname": "Thomas",
                         "lastname": "Gassmann",
                         "twitterhandle": "gassmannT"
                     }]`}))
-                );
-            });
+            );
+        });
 
-            // Act
-            service.getPersons().subscribe((data) => {
-                items = data;
-            });
+        // Act
+        service.getPersons().subscribe((data) => {
+            items = data;
+        });
 
-            // Assert
-            mockBackend.verifyNoPendingRequests();
-            expect(items[0].firstname).toEqual("Thomas");
-        }));
+        // Assert
+        mockBackend.verifyNoPendingRequests();
+        expect(items[0].firstname).toEqual("Thomas");
+    }));
 
 
 
