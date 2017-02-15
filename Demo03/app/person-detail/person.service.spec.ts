@@ -37,11 +37,11 @@ describe('Person Service', () => {
         expect(service.getPerson(1).firstname).toEqual("Thomas");
     });
 
-    it('Should get a person async', () => {
+    it('Should get a person async', async(() => {
         service.getPersonAsync(1).then((result) => {
-            expect(result.firstname).toBe('Thomas2');
+            expect(result.firstname).toBe('Thomas');
         });
-    });
+    }));
 
     it('Should get a person async with fakeAsync', fakeAsync(() => {
         let p;
