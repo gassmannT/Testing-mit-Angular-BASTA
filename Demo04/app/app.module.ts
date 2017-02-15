@@ -1,3 +1,4 @@
+import { PersonListComponent } from './person-detail/person-list.component';
 import { PersonService } from './person-detail/person.service';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
 import { NgModule } from '@angular/core';
@@ -15,6 +16,7 @@ import { AppComponent } from './app.component';
   ],
   declarations: [
     AppComponent,
+    PersonListComponent,
     PersonDetailComponent
   ],
   providers: [
