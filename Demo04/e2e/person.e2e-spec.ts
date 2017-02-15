@@ -1,4 +1,4 @@
-import { browser, element, by } from 'protractor/globals';
+import { browser, element, by } from 'protractor';
 
 describe('person end-to-end test', () => {
     beforeEach(() => {

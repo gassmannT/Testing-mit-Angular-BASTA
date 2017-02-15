@@ -4,8 +4,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-    selector: 'person-detail',
-    templateUrl: 'app/person-detail/person-detail.component.html'
+  selector: 'person-detail',
+  templateUrl: 'app/person-detail/person-detail.component.html'
 })
 export class PersonDetailComponent implements OnInit {
   person: Person;
@@ -13,20 +13,21 @@ export class PersonDetailComponent implements OnInit {
   @Input()
   personId: number;
 
-  constructor(private _personService: PersonService) { }
+  constructor(private personService: PersonService,
+    private router: Router) { }
 
   ngOnInit(): void {
-   this.person =  this._personService.getPerson(this.personId);
+    this.person = this.personService.getPerson(this.personId);
   }
 
-  onSave({value, valid}: { value: Person, valid: boolean }) {
-    //Example of Object destructuring
+  onSave(valid: boolean) {
     if (valid) {
       //this.myService.Save(person);
+       this.router.navigate(['/'])
     }
   }
 
   onBack() {
-    //this._router.navigate(['/persons'])
+    this.router.navigate(['/'])
   }
 }

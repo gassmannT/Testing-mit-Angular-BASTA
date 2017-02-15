@@ -1,5 +1,5 @@
 <h2>PersonDetail: {{person?.firstname}}</h2>
-<form #personForm="ngForm" (ngSubmit)="onSave(personForm)" novalidate>
+<form #personForm="ngForm" (ngSubmit)="onSave(personForm.valid)" novalidate>
     <div *ngIf="person">
         <div class="form-group">
             <label for="inputFirstname">Firstname: </label>
