@@ -5,7 +5,7 @@
   "author": "Thomas Bandixen & Thomas Gassmann",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tbandixen/Testing-mit-Angular"
+    "url": "https://github.com/gassmannT/Testing-mit-Angular"
   },
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",

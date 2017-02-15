@@ -13,7 +13,7 @@ exports.config = {
     // Spec patterns are relative to this config file
     specs: ['**/*e2e-spec.js'],
 
-    baseUrl: 'http://localhost:8000/',
+    baseUrl: 'http://localhost:3000/',
 
     jasmineNodeOpts: {
         defaultTimeoutInterval: 30000
