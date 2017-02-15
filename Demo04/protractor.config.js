@@ -1,3 +1,6 @@
+/*global jasmine */
+var SpecReporter = require('jasmine-spec-reporter');
+
 exports.config = {
     directConnect: true,
 
@@ -17,6 +20,8 @@ exports.config = {
 
     jasmineNodeOpts: {
         defaultTimeoutInterval: 30000
+    },
+    onPrepare: function () {
+        jasmine.getEnv().addReporter(new SpecReporter());
     }
-
 };
