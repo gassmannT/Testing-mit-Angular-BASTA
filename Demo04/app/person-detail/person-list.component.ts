@@ -12,7 +12,7 @@ export class PersonListComponent implements OnInit {
     personList: Person[] = [];
 
     constructor(private personService: PersonService,
-    private router: Router) { }
+        private router: Router) { }
 
     onEdit(person: Person) {
         let link = ['/person', person.id];
@@ -20,6 +20,6 @@ export class PersonListComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.personService.getPersons().subscribe(res => this.personList = res);
+        this.personService.getAllAsync().subscribe(res => this.personList = res);
     }
 }

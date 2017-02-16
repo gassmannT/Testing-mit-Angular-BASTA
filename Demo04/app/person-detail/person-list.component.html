@@ -9,7 +9,7 @@
                     <tr>
                         <th>Firstname</th>
                         <th>Lastname</th>
-                        <th>Github</th>
+                        <th>Twitter</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -19,8 +19,8 @@
                         <td>{{ person.firstname }}</td>
                         <td>{{ person.lastname }}</td>
                         <td>
-                            <span *ngIf="person.githubaccount">(Github: {{person.githubaccount}})</span>
-                            <span *ngIf="!person.githubaccount">-</span>
+                            <span *ngIf="person.twitterhandle">@{{person.twitterhandle}}</span>
+                            <span *ngIf="!person.twitterhandle">-</span>
                         </td>
                     </tr>
                 </tbody>
