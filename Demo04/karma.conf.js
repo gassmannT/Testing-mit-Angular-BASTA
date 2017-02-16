@@ -59,6 +59,10 @@ module.exports = function (config) {
             { pattern: 'node_modules/@angular/**/*.js', included: false, watched: false },
             { pattern: 'node_modules/@angular/**/*.js.map', included: false, watched: false },
 
+            // angular-in-memory-web-api http://localhost:9876/base/node_modules/angular-in-memory-web-api/bundles/in-memory-web-api.umd.js
+            { pattern: 'node_modules/angular-in-memory-web-api/**/*.js', included: false, watched: false },
+            { pattern: 'node_modules/angular-in-memory-web-api/**/*.js.map', included: false, watched: false },
+
             { pattern: 'systemjs.config.js', included: false, watched: false },
             { pattern: 'systemjs.config.extras.js', included: false, watched: false },
             'karma-test-shim.js', // optionally extend SystemJS mapping e.g., with barrels

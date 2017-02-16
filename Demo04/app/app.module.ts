@@ -1,3 +1,5 @@
+import { PersonDataService } from './person-detail/person-data.service';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { PersonListComponent } from './person-detail/person-list.component';
 import { PersonService } from './person-detail/person.service';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
@@ -21,7 +23,8 @@ const routes: Routes = [
     BrowserModule,
     HttpModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    InMemoryWebApiModule.forRoot(PersonDataService, { delay: 250 })
   ],
   declarations: [
     AppComponent,
