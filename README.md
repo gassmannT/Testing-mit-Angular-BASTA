@@ -7,5 +7,5 @@
 4.       Clone this repository
 
 ```
-$ git clone https://github.com/gassmannT/Testing-mit-Angular
+$ git clone https://github.com/gassmannT/Testing-mit-Angular.git
 ```
