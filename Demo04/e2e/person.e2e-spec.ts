@@ -38,8 +38,7 @@ describe('person end-to-end test', () => {
         btnSubmit.click();
         let personFirstname = element.all(by.css(".person-table .person td")).first();     
 
-        //TODO
-        expect(personFirstname.getText()).toEqual("Thomas");
+        expect(personFirstname.getText()).toEqual("Hans");
     });
 
 });
