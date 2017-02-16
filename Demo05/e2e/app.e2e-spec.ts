@@ -1,13 +1,13 @@
 import { browser, element, by } from 'protractor';
 
-describe('QuickStart E2E Tests', function () {
+describe("QuickStart E2E Tests", () => {
 
-    beforeEach(function () {
-        browser.get('/');
+    beforeEach(() => {
+        browser.get("/");
     });
 
-    it('should display title', function () {
-        expect(element(by.css('h1')).getText()).toEqual("hallo basta");
+    it("should display title", () => {
+        expect(element(by.css("h1")).getText()).toEqual("hallo basta");
     });
 
 });
