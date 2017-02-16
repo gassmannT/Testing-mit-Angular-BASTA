@@ -31,7 +31,7 @@
             <label for="inputGithub">Twitter handle: </label>
             <input id="inputGithub" name="inputGithub" class="form-control" type="text" [(ngModel)]="person.twitterhandle" />
         </div>
-        <button type="submit" class="btn btn-primary" [disabled]="!personForm.form.valid">Save</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!personForm.valid">Save</button>
         <button type="button" class="btn" (click)="onBack()">Cancel</button>
     </div>
 </form>
