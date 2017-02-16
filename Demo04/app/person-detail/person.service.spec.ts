@@ -36,7 +36,7 @@ describe('Person Service', () => {
     // }));
 
     it('Should get a person', () => {
-        expect(service.getPerson(1).id).toBe("1");
+        expect(service.getPerson(1).id).toBe(1);
         expect(service.getPerson(1).firstname).toEqual("Thomas");
     });
 

@@ -11,7 +11,7 @@ export class PersonService {
 
     getPerson(id: number): Person {
         return {
-            id: "1",
+            id: 1,
             firstname: "Thomas",
             lastname: "Gassmann",
             twitterhandle: "gassmannT"
