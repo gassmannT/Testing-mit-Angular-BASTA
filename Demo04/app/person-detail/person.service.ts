@@ -32,10 +32,9 @@ export class PersonService {
         });
     }
 
-
     getPersons(): Observable<Person[]> {
         return this.http
-            .get('app/person-detail/person-data.json')
+            .get("app/person-detail/person-data.json")
             .map(x => x.json());
     }
 }
