@@ -1,18 +1,19 @@
 import { AppComponent } from './app.component';
-describe("AppComponent", () => {
 
-    let c: AppComponent;
+describe("AppComponent", () => {
+    let comp: AppComponent;
 
     beforeEach(() => {
-        c = new AppComponent();
+        comp = new AppComponent();
     });
 
-    it("should be defined", () => {
-        expect(c).toBeTruthy();
+    it("is defined", () => {
+        expect(comp).toBeTruthy();
     });
 
-    it("is title set", () => {
-        c.ngOnInit();
-        expect(c.title).toBe("hallo basta");
+    it("title defined", () => {
+        comp.ngOnInit();
+        expect(comp.title).toBe("hallo basta");
     });
+
 });
