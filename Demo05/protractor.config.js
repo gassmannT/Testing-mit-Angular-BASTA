@@ -21,7 +21,7 @@ exports.config = {
     jasmineNodeOpts: {
         defaultTimeoutInterval: 30000
     },
-    // onPrepare: function () {
-    //     jasmine.getEnv().addReporter(new SpecReporter());
-    // }
+    onPrepare: function () {
+        jasmine.getEnv().addReporter(new SpecReporter());
+    }
 };
