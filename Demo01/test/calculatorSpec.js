@@ -7,8 +7,11 @@ describe('calculator model', function () {
     it('should add numbers', function () {
         console.log(this.calculator.add(Infinity, NaN));
         console.log(this.calculator.add(2, 3));
+        console.log("hallo basta!");
 
-        expect(this.calculator.add(2, 2)).toBe(4);
+        expect(this.calculator.add(2, 3)).toBe(5);
+        expect(this.calculator.add(0, 3)).toBe(3);
+        expect(this.calculator.add(3, 0)).toBe(3);
     });
 
     it('should throw error when dividing by zero', function () {
