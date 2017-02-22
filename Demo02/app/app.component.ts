@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
     private _title: string;
 
-    get title() {
+    get title(): string {
         return this._title;
-
     }
 
     set title(value: string) {
